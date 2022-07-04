@@ -68,7 +68,7 @@ int relayTest::buzzTest(int durationSecs) // Returns 1 when complete
             {
                 int a = buzzHz;
                 buzzHz = 1;
-                buzzFailHz = a;
+                buzzFailHz = a / 2;
                 digitalWrite(coilPin, LOW);
                 return (1);
             };
@@ -76,7 +76,7 @@ int relayTest::buzzTest(int durationSecs) // Returns 1 when complete
             {
                 int a = buzzHz;
                 buzzHz = 1;
-                buzzFailHz = a;
+                buzzFailHz = a / 2;
                 digitalWrite(coilPin, LOW);
                 return (1);
             }; // backwards due to INPUT_PULLUP
@@ -89,7 +89,7 @@ int relayTest::buzzTest(int durationSecs) // Returns 1 when complete
             {
                 int a = buzzHz;
                 buzzHz = 1;
-                buzzFailHz = a;
+                buzzFailHz = a / 2;
                 digitalWrite(coilPin, LOW);
                 return (1);
             };
@@ -97,7 +97,7 @@ int relayTest::buzzTest(int durationSecs) // Returns 1 when complete
             {
                 int a = buzzHz;
                 buzzHz = 1;
-                buzzFailHz = a;
+                buzzFailHz = a / 2;
                 digitalWrite(coilPin, LOW);
                 return (1);
             };
@@ -105,7 +105,7 @@ int relayTest::buzzTest(int durationSecs) // Returns 1 when complete
             digitalWriteFast(coilPin, LOW);
         }
 
-        buzzTestCurrentHz = buzzHz;
+        buzzTestCurrentHz = buzzHz / 2;
 
         if (time > lastTime2 + ((1000 * durationSecs) / 200))
         {
